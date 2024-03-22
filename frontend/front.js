@@ -9,7 +9,7 @@ const getByIdForm = document.getElementById('getById')
 const addNewForm = document.getElementById('addNew')
 
 getAllButton.addEventListener('click', () => {
-  fetch(`http://localhost:3000/products`)
+  fetch(`https://products-api-ccs3.onrender.com/products`)
     .then(res => res.json())
     .then(products => generateUI(products))
 })
@@ -18,7 +18,7 @@ getByIdForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const id = event.target[0].value;
 
-  fetch(`http://localhost:3000/products/${id}`)
+  fetch(`https://products-api-ccs3.onrender.com/products/${id}`)
     .then(res => res.json())
     .then(product => generateUI(product))
 })
@@ -31,7 +31,7 @@ addNewForm.addEventListener('submit', (e) => {
   const title = e.target[0].value
   const description = e.target[1].value
 
-  fetch(`http://localhost:3000/products`, {
+  fetch(`https://products-api-ccs3.onrender.com`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
