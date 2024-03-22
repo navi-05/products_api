@@ -1,0 +1,9 @@
+.containerStyles {
+ display: flex;
+ flex-direction: column;
+ align-items: start;
+}
+
+.para {
+  color: gray;  
+}
